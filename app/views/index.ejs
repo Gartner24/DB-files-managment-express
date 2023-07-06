@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Agregar imagen al hacer submit -->
+            <h2>Inserte imagen</h2>
+			<input type="file" name="image" id="image-input" accept="image/*" />
+			<button id="post-image-button">Enviar</button>
+            <br>
+            <!-- Agregar audio mp3 al hacer submit -->
+            <h2>Inserte audio</h2>
+            <input type="file" name="audio" id="audio-input" accept="audio/*" />
+            <button id="post-audio-button">Enviar</button>
+		</div>
+        <div id="image-container">
+
+        </div>
+        <div id="audio-container">
+            
+        </div>
+        <script type="module" src="/js/script.js"></script>
+	</body>
+</html>
