@@ -30,7 +30,7 @@ app.set('view engine', 'ejs');
 
 // Render index.ejs
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Node.js' });
+  res.render('index', { title: 'google drive' });
 });
 
 // Iniciar el servidor

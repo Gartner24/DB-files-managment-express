@@ -1,6 +1,8 @@
 const postImageButton = document.getElementById('post-image-button');
 const postAudioButton = document.getElementById('post-audio-button');
 
+const url = 'https://59f9-181-237-102-15.ngrok-free.app'
+
 postAudioButton.addEventListener('click', () => {
 	const audioInput = document.getElementById('audio-input');
 	const audio = audioInput.files[0];
@@ -30,7 +32,7 @@ postImageButton.addEventListener('click', () => {
 });
 
 const postImage = async (base64) => {
-	return await fetch('http://26.124.227.91:3001/api/images', {
+	return await fetch(url+'/api/images', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -52,7 +54,7 @@ const postImage = async (base64) => {
 };
 
 const postAudio = async (base64) => {
-	return await fetch('http://26.124.227.91:3001/api/mp3', {
+	return await fetch(url+'/api/mp3', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -90,7 +92,7 @@ const convertFileToBase64 = (file) => {
 };
 
 const getImages = async () => {
-	return await fetch('http://26.124.227.91:3001/api/images/')
+	return await fetch(url+'/api/images/')
 		.then((response) => {
 			if (!response.ok) {
 				throw new Error('Error getting images');
@@ -107,7 +109,7 @@ const getImages = async () => {
 };
 
 const getAudios = async () => {
-	return await fetch('http://26.124.227.91:3001/api/mp3/')
+	return await fetch(url+'/api/mp3/')
 		.then((response) => {
 			if (!response.ok) {
 				throw new Error('Error getting audios');
