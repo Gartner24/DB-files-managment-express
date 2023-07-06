@@ -1,9 +1,18 @@
-CREATE DATABASE filesDB;
-
 USE filesDB;
 
-CREATE TABLE archivos (
-    id INT PRIMARY KEY,
-    archivo_mp3 BLOB,
-    archivo_jpg BLOB
+DROP TABLE IF EXISTS images;
+DROP TABLE IF EXISTS audio;
+
+DELETE FROM images WHERE id = 1;
+
+CREATE TABLE images (
+    id INT AUTO_INCREMENT,
+    image LONGTEXT,
+    CONSTRAINT `PK_id` PRIMARY KEY (id)
+);
+
+CREATE TABLE audio (
+    id INT AUTO_INCREMENT,
+    mp3 LONGTEXT,
+    CONSTRAINT `PK_id` PRIMARY KEY (id)
 );
