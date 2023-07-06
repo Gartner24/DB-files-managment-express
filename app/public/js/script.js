@@ -1,7 +1,7 @@
 const postImageButton = document.getElementById('post-image-button');
 const postAudioButton = document.getElementById('post-audio-button');
 
-const url = 'https://59f9-181-237-102-15.ngrok-free.app'
+const url = 'https://gulugulu-draip.onrender.com'
 
 postAudioButton.addEventListener('click', () => {
 	const audioInput = document.getElementById('audio-input');
