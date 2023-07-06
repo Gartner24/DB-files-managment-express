@@ -1,3 +1,5 @@
+CREATE DATABASE filesDB;
+
 USE filesDB;
 
 DROP TABLE IF EXISTS images;
